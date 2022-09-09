@@ -1,6 +1,8 @@
 #!/bin/bash
 chmod a+x $1
 
+betty $1
+
 git add .
 
 #recieve commit message and save in message
