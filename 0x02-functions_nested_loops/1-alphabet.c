@@ -10,12 +10,11 @@
 
 int main(void)
 {
-	char text[] = "_putchar";
-	int i = 0;
+	char i = 'a';
 
-	while (text[i] != '\0')
+	while (i <= 'z')
 	{
-		_putchar(text[i]);
+		_putchar(i);
 		i++;
 	}
 
