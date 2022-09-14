@@ -1,0 +1,1 @@
+pastetoggle=<F2>
