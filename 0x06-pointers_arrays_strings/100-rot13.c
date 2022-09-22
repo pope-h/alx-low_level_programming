@@ -1,32 +1,26 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_number - print any integer using putchar
- * @n: integer to be printed
+ * rot13 - encodes a string using rot13
+ * @a: string to encode
+ * Return: encode to rot13
  */
 
-void print_number(int n)
+char *rot13(char *a)
 {
-	int count, y, k;
+	int i, x, hold;
+	char check[] = "AaZz";
+	char ntom[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	y = 1000000000;
-
-	if (n == 0)
-		_putchar('0');
-	else if (n > 0)
-		n *= -1;
-	else
-		_putchar('-');
-	for (count = 0; count < 10; count++, y /= 10)
-	{
-		if (n / y == 0)
-			continue;
-		else
+	for (i = 0; *(a + i) != '\0'; i++)
+		for (x = 0; x < 2; x++)
 		{
-			k = (-(n / y) % 10);
-			if (k < 0)
-				k *= -1;
-			_putchar(k + '0');
+			if (*(a + i) >= check[x] && *(a + i) <= check[x + 2])
+			{
+				hold = (*(a + i) - 65 - (x * 32));
+				*(a + i) = (ntom[hold] + (x * 32));
+			}
 		}
-	}
+	return (a);
 }
