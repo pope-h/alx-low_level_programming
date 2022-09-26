@@ -1,32 +1,28 @@
 #include "holberton.h"
-/**
- * _strspn - gets the length of a prefix substring
- *
- * @s: segment to return bytes from
- * @accept: the bytes to include
- *
- * Return: the number of bytes in the initial segment of @s which consist only
- * of bytes from @accept
- */
 
+/**
+ * _strspn - gets the length of a prefix substring.
+ * @s: initial segment.
+ * @accept: accepted bytes.
+ * Return: the number of accepted bytes.
+ */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j;
-	int c = 0;
+	unsigned int i, j, bool;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		if (s[i] != 32)
+		bool = 1;
+		for (j = 0; *(accept + j) != '\0'; j++)
 		{
-			for (j = 0; accept[j] != '\0'; j++)
+			if (*(s + i) == *(accept + j))
 			{
-				if (s[i] == accept[j])
-					c++;
+				bool = 0;
+				break;
 			}
 		}
-		else
-			return (c);
-
+		if (bool == 1)
+			break;
 	}
-	return (c);
+	return (i);
 }
