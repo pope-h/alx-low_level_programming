@@ -13,9 +13,9 @@ int _isupper(int c)
 	for (alp = 'A'; alp <= 'Z'; alp++)
 	{
 		if (c == alp)
-			return 1;
+			return (1);
 		else
-			return 0;
+			return (0);
 	}
-	return 0;
+	return (0);
 }
