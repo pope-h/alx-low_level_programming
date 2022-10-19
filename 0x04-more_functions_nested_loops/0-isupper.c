@@ -8,8 +8,14 @@
 
 int _isupper(int c)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	else
-		return (0);
+	char alp;
+
+	for (alp = 'A'; alp <= 'Z'; alp++)
+	{
+		if (c == alp)
+			return 1;
+		else
+			return 0;
+	}
+	return 0;
 }
