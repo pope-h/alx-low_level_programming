@@ -1,2 +1,1 @@
-# 0x18-dynamic_libraries
-In this project, I learnt how to create dynamic libraries from modules and use them
+Dynamic library. The functions have been previously coded but for this task I created dummy files each containing the approprate prototype as seen in the header file.
