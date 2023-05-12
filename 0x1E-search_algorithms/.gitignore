@@ -1,4 +1,9 @@
-listint/*.c
+listint/
 105-jump_list.c
 105-main.c
 105-jump
+0-linear
+103-exponential
+104-advanced_binary
+1-binary
+*-main.c
